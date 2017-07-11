@@ -1,0 +1,27 @@
+title: Your awesome title
+author: Squareyes
+email: info@squareyes.info
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+#header_pages:
+# - about.html
+
+# Build settings
+permalink: pretty
+exclude:
+- Gemfile.lock
+- Gemfile
+- README*
+- node_modules
+- ".gitignore"
+- assets/scripts/src
+- yarn.lock
+- ".git"
+sass:
+  sass_dir: assets/styles/
+  style: compressed
