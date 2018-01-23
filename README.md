@@ -1,5 +1,5 @@
 # Siteleaf Starter
--
+
 ### Starter template for Siteleaf builds, powered by Jekyll.
 
 ## Getting up and Running
