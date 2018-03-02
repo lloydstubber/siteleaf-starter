@@ -1,24 +1,17 @@
 ---
-title: Bloom Publishing
+title:
 timezone: Australia/Melbourne
 collections:
   posts:
     title: Posts
     output: true
-  projects:
-    title: Projects
-    output: true
-  store:
-    title: Store
-    output: true
   uploads:
     title: Uploads
     output: true
-author: Bloom
-email: info@bloompublishing.com.au
-description: 'Bloom is an independent publishing house based in Melbourne, Australia.
+author:
+email:
+description:
 
-'
 permalink: pretty
 exclude:
 - Gemfile.lock
@@ -31,7 +24,7 @@ exclude:
 - ".git"
 - package.json
 - package-lock.json
-facebook_url: https://www.facebook.com/bloompublishing
-insta_url: https://www.instagram.com/bloompublishing
+facebook_url:
+insta_url:
 whitelist:
 - jekyll-redirect-from

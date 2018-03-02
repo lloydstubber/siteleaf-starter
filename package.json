@@ -1,7 +1,7 @@
 {
-  "name": "static-starter",
+  "name": "siteleaf-starter",
   "version": "1.0.0",
-  "description": "Static starter WIP",
+  "description": "Siteleaf starter WIP",
   "main": "index.js",
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -25,12 +25,12 @@
   },
   "repository": {
     "type": "Git",
-    "url": "https://github.com/lloydstubber/Static-Starter"
+    "url": "https://github.com/lloydstubber/siteleaf-starter"
   },
   "author": "Lloyd Stubber",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lloydstubber/Static-Starter/issues"
+    "url": "https://github.com/lloydstubber/siteleaf-starter/issues"
   },
   "homepage": ""
 }

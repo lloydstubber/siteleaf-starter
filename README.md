@@ -9,4 +9,14 @@
 - Run `npm install`
 - Then for development you'll need to run `gulp` and `bundle exec jekyll serve` at the same time. This is a WIP and will be streamlined into a single process with hot reloading soon.
 
-## Developer Notes
+## Under the hood
+- Jekyll
+- Github Pages Support
+- SCSS Minification/Compilation
+- SCSS Compilation
+- CSS Autoprefixer
+- CSS Sourcemaps
+- ES6 Support
+- JS Minification
+- JS Concat
+- Error Notifications
