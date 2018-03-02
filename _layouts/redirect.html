@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <meta charset="utf-8">
+  <title>Redirecting…</title>
+  <link rel="stylesheet" href="{{ "/assets/styles/main.css" | relative_url }}">
+  <link rel="canonical" href="{{ page.redirect.to }}">
+  <meta http-equiv="refresh" content="0; url={{ page.redirect.to }}">
+  <div style="margin: 1em;">
+    <h4>Redirecting…</h4>
+    <p><a href="{{ page.redirect.to }}">Click here</a> if you are not redirected.</p>
+  </div>
+  <script>location="{{ page.redirect.to }}"</script>
+</html>

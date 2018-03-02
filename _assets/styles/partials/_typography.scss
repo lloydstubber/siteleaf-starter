@@ -1,0 +1,61 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-heading;
+}
+
+h1 {
+  font-size: 3.125em;
+}
+
+h2 {
+  font-size: 2.618em;
+}
+
+h3 {
+  font-size: 1.931em;
+}
+
+h4 {
+  font-size: 1.618em;
+}
+
+h5 {
+  font-size: 1.194em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+p,
+label,
+input,
+select,
+span,
+button,
+ul,
+li {
+  font-family: $font-body;
+}
+
+p {
+  font-size: 1.2em;
+  padding-bottom: 1em;
+  line-height: 1.4;
+}
+
+strong {
+  font-family: $font-bold;
+}
+
+em {
+  font-family: $font-ital;
+}
+
+a {
+  color: black;
+}

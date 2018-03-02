@@ -1,17 +1,24 @@
-title: Your awesome title
-author: Squareyes
-email: info@squareyes.info
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+---
+title: Bloom Publishing
+timezone: Australia/Melbourne
+collections:
+  posts:
+    title: Posts
+    output: true
+  projects:
+    title: Projects
+    output: true
+  store:
+    title: Store
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+author: Bloom
+email: info@bloompublishing.com.au
+description: 'Bloom is an independent publishing house based in Melbourne, Australia.
 
-# If you want to link only specific pages in your header, uncomment
-# this and add the path to the pages in order as they should show up
-#header_pages:
-# - about.html
-
-# Build settings
+'
 permalink: pretty
 exclude:
 - Gemfile.lock
@@ -22,6 +29,9 @@ exclude:
 - assets/scripts/src
 - yarn.lock
 - ".git"
-sass:
-  sass_dir: assets/styles/
-  style: compressed
+- package.json
+- package-lock.json
+facebook_url: https://www.facebook.com/bloompublishing
+insta_url: https://www.instagram.com/bloompublishing
+whitelist:
+- jekyll-redirect-from

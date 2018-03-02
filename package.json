@@ -1,0 +1,36 @@
+{
+  "name": "static-starter",
+  "version": "1.0.0",
+  "description": "Static starter WIP",
+  "main": "index.js",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.18.13",
+    "es6-promise": "^4.1.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-babel": "^7.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "Git",
+    "url": "https://github.com/lloydstubber/Static-Starter"
+  },
+  "author": "Lloyd Stubber",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lloydstubber/Static-Starter/issues"
+  },
+  "homepage": ""
+}
