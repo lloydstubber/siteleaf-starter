@@ -12,8 +12,6 @@ const cssnano = require('gulp-cssnano');
 const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
-const browserSync = require('browser-sync').create();
-const reload = browserSync.reload;
 
 // Sass
 gulp.task('sass', () => {
@@ -25,7 +23,6 @@ gulp.task('sass', () => {
     .pipe(cssnano())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('assets/styles/'))
-    .pipe(browserSync.stream())
 });
 
 // ES6 Support/Minify
@@ -51,22 +48,7 @@ gulp.task('watch', () => {
   gulp.watch('_assets/styles/partials/*.scss', ['sass']);
   gulp.watch('_assets/scripts/*.js', ['js']);
   gulp.watch('_assets/scripts/vendor/*.js', ['vendor']);
-  // Example with hot reload
-  // gulp.watch('src/js/*.js', ['js']).on('change', reload);
 });
-
-// Browsersync - Coming soon
-// gulp.task('serve', () => {
-//   // Serve files from the root of this project
-//   browserSync.init({
-//     server: {
-//       baseDir: "./"
-//     },
-//     tunnel: false // True for unique testing link
-//   });
-
-//   gulp.watch("*.html").on("change", reload);
-// });
 
 // Run tasks on 'gulp'
 gulp.task('default', ['sass', 'watch', 'js', 'vendor']);
