@@ -5,7 +5,6 @@ require('es6-promise').polyfill();
 const gulp = require('gulp');
 const babel = require('gulp-babel');
 const plumber = require('gulp-plumber');
-const watch = require('gulp-watch');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
@@ -14,7 +13,7 @@ const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 
 // Sass
-gulp.task('sass', () => {
+gulp.task('sass', gulp.series((done) => {
   return gulp.src('_assets/styles/*.scss')
     .pipe(plumber())
     .pipe(sourcemaps.init())
@@ -22,33 +21,38 @@ gulp.task('sass', () => {
     .pipe(autoprefixer('last 2 versions'))
     .pipe(cssnano())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('assets/styles/'))
-});
+    .pipe(gulp.dest('assets/styles/'));
+    done();
+}));
 
 // ES6 Support/Minify
-gulp.task('js', () => {
+gulp.task('js', gulp.series((done) => {
   gulp.src('_assets/scripts/*.js')
       .pipe(babel({
         presets: ['env']
     }))
     .pipe(uglify())
-    .pipe(gulp.dest('assets/scripts/'))
-});
+    .pipe(gulp.dest('assets/scripts/'));
+    done();
+}));
 
 // Vendor Concat/Minify
-gulp.task('vendor', () => {
+gulp.task('vendor', gulp.series((done) => {
   return gulp.src('_assets/scripts/vendor/*.js')
     .pipe(concat('vendor.js'))
     .pipe(uglify())
     .pipe(gulp.dest('assets/scripts/'));
-});
+    done();
+}));
 
 // Watcher
 gulp.task('watch', () => {
-  gulp.watch('_assets/styles/partials/*.scss', ['sass']);
-  gulp.watch('_assets/scripts/*.js', ['js']);
-  gulp.watch('_assets/scripts/vendor/*.js', ['vendor']);
-});
+  gulp.watch('_assets/styles/partials/*.scss', gulp.series('sass'));
+  gulp.watch('_assets/scripts/*.js', gulp.series('js'));
+  gulp.watch('_assets/scripts/vendor/*.js', gulp.series('vendor'));
+} );
 
 // Run tasks on 'gulp'
-gulp.task('default', ['sass', 'watch', 'js', 'vendor']);
+gulp.task('default',
+  gulp.parallel('watch', 'sass', 'js', 'vendor')
+);

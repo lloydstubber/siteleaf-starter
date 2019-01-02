@@ -9,11 +9,14 @@
 - Install bundle via Ruby gems
 - Run `bundle install`
 - Run `npm install`
-- Then for development you'll need to run `gulp` and `bundle exec jekyll serve` at the same time. This is a WIP and will be streamlined into a single process with hot reloading soon.
+- Install the new `gulp-cli` with [these instructions](https://github.com/gulpjs/gulp/blob/master/docs/getting-started/1-quick-start.md)
+- If you have problems installing that due to old Gulp versions, [follow this](https://github.com/gulpjs/gulp/issues/1610) to remove the `gulp.1` file and try again
+- Then for development you'll need to run `gulp` and `bundle exec jekyll serve` at the same time. This is a WIP and will be streamlined into a single process with hot reloading soon
 
 ## Under the hood
 - Jekyll
 - Github Pages Support
+- Gulp
 - SCSS Minification/Compilation
 - SCSS Compilation
 - CSS Autoprefixer
