@@ -17,7 +17,8 @@
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^3.0.0",
-    "gulp-watch": "^4.3.11"
+    "gulp-watch": "^4.3.11",
+    "through2": "^3.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

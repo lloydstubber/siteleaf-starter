@@ -11,6 +11,7 @@ const cssnano = require('gulp-cssnano');
 const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
+const through2 = require('through2');
 
 // Sass
 gulp.task('sass', gulp.series((done) => {
@@ -21,6 +22,12 @@ gulp.task('sass', gulp.series((done) => {
     .pipe(autoprefixer('last 2 versions'))
     .pipe(cssnano())
     .pipe(sourcemaps.write())
+    .pipe(through2.obj(function(file, enc, cb) {
+      var date = new Date();
+      file.stat.atime = date;
+      file.stat.mtime = date;
+      cb(null, file);
+    }))
     .pipe(gulp.dest('assets/styles/'));
     done();
 }));
